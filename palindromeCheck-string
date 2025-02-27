@@ -1,0 +1,38 @@
+public class Palindrome {
+	
+	public static boolean palindromeCheck(String str) {
+		
+		int start =0; int end=str.length()-1;
+		
+		while(start < end) {
+			if(str.charAt(start) != str.charAt(end)) {
+	// If mismatch found, return false immediately, is starting elem mismatches it is not palindrome only
+				return false;
+			}
+			start++;
+			end--;
+			
+		}
+		//it needs to check all elements to say it is palindrome
+		  return true;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str= "madamm";
+		
+		//boolean variable  is required to store the data
+		boolean res = palindromeCheck(str);
+		
+		if(res ) {// return true if res==true 
+			System.out.println("palindrome");
+			
+		}else {
+			System.out.println("not plaindrome");
+		}
+		
+	}
+
+}

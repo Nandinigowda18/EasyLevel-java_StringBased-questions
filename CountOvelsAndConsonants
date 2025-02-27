@@ -1,0 +1,39 @@
+import java.util.*;
+public class CountOvelsAndConsonants {
+	
+	public static void ovelsAndConsonants( String str) {
+		
+		int vovel =0; int consonant =0;int space =0;
+		// convert to lowercase
+		str = str.toLowerCase();
+		
+		for(int i=0;i<str.length()-1;i++) {
+	// insted of writing str.charAt(i) everywhere u can use a character
+			 char ch = str.charAt(i);
+
+			 if(ch=='a' ||ch=='e'|| ch=='i'||ch=='o'|| ch=='u') {
+				 
+				 vovel++;	 
+			 }
+			 else if(ch >='a'&& ch <='z') {
+				 consonant++;
+			 }
+			 else if(ch==' ') {
+				 space++;	 
+			 }	
+		}
+		System.out.println("vovel "+vovel);
+		System.out.println("consonant "+consonant);
+		System.out.println("space "+space);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str ="Raju and Ramu Are Good Friends";
+		ovelsAndConsonants(str);
+		
+	}
+
+}
